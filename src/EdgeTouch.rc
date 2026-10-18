@@ -1,0 +1,36 @@
+#include <windows.h>
+#include "resource.h"
+
+IDI_APP ICON "res/edgetouch.ico"
+IDI_OFF ICON "res/edgetouch-off.ico"
+
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "res/EdgeTouch.manifest"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION EDGETOUCH_VERSION_MAJOR,EDGETOUCH_VERSION_MINOR,EDGETOUCH_VERSION_PATCH,0
+ PRODUCTVERSION EDGETOUCH_VERSION_MAJOR,EDGETOUCH_VERSION_MINOR,EDGETOUCH_VERSION_PATCH,0
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0x0L
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Nihal Yusof"
+            VALUE "FileDescription", "EdgeTouch"
+            VALUE "FileVersion", EDGETOUCH_VERSION_STR
+            VALUE "InternalName", "EdgeTouch"
+            VALUE "LegalCopyright", "Copyright (c) 2026 Nihal Yusof"
+            VALUE "OriginalFilename", "EdgeTouch.exe"
+            VALUE "ProductName", "EdgeTouch"
+            VALUE "ProductVersion", EDGETOUCH_VERSION_STR
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
