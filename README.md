@@ -114,7 +114,8 @@ zig c++ -target x86_64-windows-gnu -O2 -std=c++17 -Isrc src/EdgeTouch.cpp src/Ed
   -Wl,--subsystem,windows -s
 ```
 
-Pushing a `v*` tag builds the exe on GitHub Actions and attaches it to a release.
+Every push is built on GitHub Actions. Publishing a release on GitHub builds the exe and attaches
+it, along with its SHA-256 checksum.
 
 ## License
 
